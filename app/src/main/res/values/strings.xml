@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HELTH_CALC</string>
+    <string name="app_name">IMC NCD</string>
 
     <!--    Strings Main Activity-->
     <string name="main_title">Calculadora Saudável</string>
