@@ -4,12 +4,15 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import br.senai.sp.jandira.imcapp20_a.R
 import br.senai.sp.jandira.imcapp20_a.utils.converterBase64ParaBitmap
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_dash_board.*
 
 class DashBoardActivity : AppCompatActivity() {
+
+    lateinit var ivPesarAgora: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
@@ -25,6 +28,13 @@ class DashBoardActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        ivPesarAgora = findViewById(R.id.iv_pesar_agora)
+
+        ivPesarAgora.setOnClickListener {
+            val intent = Intent(this, PesarActivity::class.java)
+            startActivity(intent)
         }
 
     }

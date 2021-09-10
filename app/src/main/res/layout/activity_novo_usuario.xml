@@ -12,16 +12,6 @@
     tools:context=".ui.NovoUsuarioActivity"
     android:orientation="vertical">
 
-    <Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/AppTheme" />
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_header"
         android:layout_width="match_parent"
@@ -42,11 +32,10 @@
 
             <ImageView
                 android:id="@+id/img_profile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/hoffs" />
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/profile"
+                android:scaleType="centerCrop"/>
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -104,7 +93,7 @@
         android:background="@drawable/edit_text_login_background"
         android:ems="10"
         android:hint="Senha"
-        android:inputType="textPersonName"
+        android:inputType="numberPassword"
         android:padding="8dp"
         android:drawableStart="@drawable/ic_lock_24"
         android:drawableTint="@color/colorAccent"
@@ -123,10 +112,6 @@
         android:text="Dados para autenticação"
         android:textSize="18sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <EditText
             android:id="@+id/et_nome"
             android:layout_width="match_parent"
@@ -142,7 +127,7 @@
             android:drawableStart="@drawable/name"
             android:drawableTint="@color/colorAccent"
             android:drawablePadding="16dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+
 
     <EditText
         android:id="@+id/et_data_nascimento"
@@ -179,22 +164,6 @@
         android:drawablePadding="16dp" />
 
     <EditText
-        android:id="@+id/et_peso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/edit_text_login_background"
-        android:ems="10"
-        android:hint="Peso"
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        android:drawableStart="@drawable/peso"
-        android:drawableTint="@color/colorAccent"
-        android:drawablePadding="16dp" />
-
-    <EditText
         android:id="@+id/et_altura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -204,7 +173,7 @@
         android:background="@drawable/edit_text_login_background"
         android:ems="10"
         android:hint="Altura"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:padding="8dp"
         android:drawableStart="@drawable/altura"
         android:drawableTint="@color/colorAccent"

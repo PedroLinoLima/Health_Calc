@@ -11,7 +11,6 @@ import android.widget.TextView
 import br.senai.sp.jandira.imcapp20_a.R
 import br.senai.sp.jandira.imcapp20_a.dao.UsuarioDao
 import br.senai.sp.jandira.imcapp20_a.utils.obterDiferencaEntreDatasEmAnos
-import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -38,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
             abrirDashBoard()
         }
 
-        editUser = findViewById(R.id.ed_user)
+        editUser = findViewById(R.id.ed_peso)
         editPassword = findViewById(R.id.ed_password)
         btnLogin = findViewById(R.id.btn_login)
         tvMensagemErro = findViewById(R.id.tv_mensagem_erro)

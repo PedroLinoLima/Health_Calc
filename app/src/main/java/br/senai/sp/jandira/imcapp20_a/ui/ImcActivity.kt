@@ -14,7 +14,7 @@ class ImcActivity : AppCompatActivity() {
 
         val btnCalcular: Button = findViewById(R.id.button_calcular_imc)
         val edPeso: EditText = findViewById(R.id.ed_peso)
-        val edAltura: EditText = findViewById(R.id.ed_altura)
+        val edAltura: EditText = findViewById(R.id.ed_peso)
 
         btnCalcular.setOnClickListener {
 
