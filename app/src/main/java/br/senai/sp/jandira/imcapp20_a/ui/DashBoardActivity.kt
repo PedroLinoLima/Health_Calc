@@ -33,10 +33,15 @@ class DashBoardActivity : AppCompatActivity() {
         ivPesarAgora = findViewById(R.id.iv_pesar_agora)
 
         ivPesarAgora.setOnClickListener {
-            val intent = Intent(this, PesarActivity::class.java)
-            startActivity(intent)
+            abrirPesar()
         }
 
+    }
+
+    private fun abrirPesar() {
+        val intent = Intent(this, PesarActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun preencherDashBoard() {
