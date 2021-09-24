@@ -8,23 +8,23 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.NovoUsuarioActivity"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/header_background">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="30dp"
             app:cardCornerRadius="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,12 +41,13 @@
         <TextView
             android:id="@+id/tv_trocar_foto"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat"
             android:text="Trocar foto"
-            android:textColor="@color/colorAccent"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
+            android:layout_marginBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_view_profile" />
@@ -109,7 +110,7 @@
         android:drawableStart="@drawable/user"
         android:drawablePadding="8dp"
         android:drawableTint="@color/colorAccent"
-        android:text="Dados para autenticação"
+        android:text="Dados pessoais"
         android:textSize="18sp" />
 
         <EditText
@@ -179,19 +180,51 @@
         android:drawableTint="@color/colorAccent"
         android:drawablePadding="16dp" />
 
-
-    <Button
-        android:id="@+id/bt_gravar"
+    <TextView
+        android:id="@+id/tv_sexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="100dp"
-        android:text="Gravar"
-        android:background="@drawable/button_background"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textAllCaps="true"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/genero"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorAccent"
+        android:text="Sexo"
+        android:textSize="18sp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sexo">
+
+        <RadioButton
+            android:id="@+id/radio_masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent"
+            android:text="Masculino"
+            android:textColor="@color/colorAccent"
+            android:drawableStart="@drawable/masculino"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent"
+            android:text="Feminino"
+            android:textColor="@color/colorAccent"
+            android:drawableStart="@drawable/feminino"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="8dp"/>
+
+    </RadioGroup>
 
 </LinearLayout>
 

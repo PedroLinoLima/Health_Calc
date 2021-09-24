@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/bmi"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ui.NovoUsuarioActivity"></activity>
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".ui.NovoUsuarioActivity"
+            android:parentActivityName=".ui.LoginActivity"/>
         <activity android:name=".ui.DashBoardActivity" />
         <activity android:name=".ui.LoginActivity">
             <intent-filter>

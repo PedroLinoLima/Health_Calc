@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.CadastroBiometriaActivity">
+
+    <EditText
+        android:id="@+id/edit_text_peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edit_text_login_background"
+        android:ems="10"
+        android:hint="Peso"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:drawableStart="@drawable/peso"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="16dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_data_pesagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_login_background"
+        android:ems="10"
+        android:inputType="none"
+        android:padding="8dp"
+        android:drawableStart="@drawable/date_nascimento"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="16dp"
+        android:hint="Data da pesagem"
+        android:focusable="false"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="32dp"
+        android:hint="Nível de atividade:">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_nivel_atividade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:drawableStart="@drawable/masculino"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="8dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <SeekBar
+        android:id="@+id/seek_atividades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:scrollIndicators="bottom"
+        android:max="3"/>
+
+    <TextView
+        android:id="@+id/tv_nivel_atividade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Atividade"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>
