@@ -14,7 +14,9 @@
         <activity
             android:name=".ui.NovoUsuarioActivity"
             android:parentActivityName=".ui.LoginActivity"/>
-        <activity android:name=".ui.DashBoardActivity" />
+        <activity
+            android:name=".ui.DashBoardActivity"
+            android:parentActivityName=".ui.LoginActivity"/>
         <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

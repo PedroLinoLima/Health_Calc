@@ -28,6 +28,11 @@ class DashBoardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
 
+        supportActionBar!!.title = "Perfil"
+        supportActionBar!!.subtitle = "Bem-vindo"
+        supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar_background))
+        supportActionBar!!.elevation = 0.0f
+
         preencherDashBoard()
 
         card_weight.setOnClickListener {
